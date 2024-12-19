@@ -38,7 +38,7 @@ def show_side_bar_inputs():
         return None, None, None
 
     st.sidebar.subheader("Выбор города")
-    city = st.sidebar.text_input("Введите название города", "Moscow")
+    city = st.sidebar.selectbox("Выберите город", df["city"].unique())
 
     st.sidebar.subheader("API ключ")
     api_token = st.sidebar.text_input("Введите API ключ OpenWeatherMap")
